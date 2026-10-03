@@ -1,0 +1,20 @@
+[project]
+name = "agente-salas"
+version = "1.0.0"
+description = "Agente A2A v1.0 (JSON-RPC) que é cliente MCP da Central de Salas"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp==2.3.0",
+    "starlette==1.7.0",
+    "uvicorn==0.54.0",
+]
+
+[project.scripts]
+agente-salas = "agente.app:main"
+
+[build-system]
+requires = ["uv_build>=0.10.11,<0.11.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "agente"

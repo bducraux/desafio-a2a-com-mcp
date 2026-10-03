@@ -1,0 +1,16 @@
+[project]
+name = "desafio-a2a-com-mcp"
+version = "1.0.0"
+description = "A Ponte: servidor MCP de salas + agente A2A que é cliente MCP por dentro"
+requires-python = ">=3.12"
+dependencies = ["salas-mcp", "agente-salas"]
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = ["servidor-mcp", "agente"]
+
+[tool.uv.sources]
+salas-mcp = { workspace = true }
+agente-salas = { workspace = true }
